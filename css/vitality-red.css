@@ -444,7 +444,7 @@ header.video .scroll-down {
 .portfolio-carousel {
   padding: 0;
   color: white;
-  background-color: #222;
+  background-color: white;
 }
 
 .portfolio-carousel .item {
@@ -452,7 +452,9 @@ header.video .scroll-down {
   text-align: center;
   background-color: #222;
   background-size: cover;
+  max-height: 600px; /* max-height is additional */
 }
+
 
 .portfolio-carousel .item .project-details .project-name {
   font-size: 40px;
