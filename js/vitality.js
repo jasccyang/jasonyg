@@ -86,6 +86,7 @@ $(document).ready(function() {
   });
 
   $(".portfolio-carousel").owlCarousel({
+    /*
     singleItem: true,
     navigation: true,
     pagination: false,
@@ -97,6 +98,26 @@ $(document).ready(function() {
     mouseDrag: false,
     touchDrag: false,
     transitionStyle: "fadeUp"
+    */
+    // autoPlay Settings
+    items:2,
+    mouseDrag: true,
+    navigation: true,
+    navigationText: [
+      "<i class='fa fa-angle-left'></i>",
+      "<i class='fa fa-angle-right'></i>"
+    ],
+    loop:true,
+    margin:10,
+    autoPlay:true,
+    autoPlayTimeout:1000,
+    autoPlayHoverPause:true
+  });
+  $('.play').on('click',function(){
+  owl.trigger('play.owl.autoPlay',[1000])
+  })
+  $('.stop').on('click',function(){
+    owl.trigger('stop.owl.autoPlay')
   });
 
   $(".testimonials-carousel, .mockup-carousel").owlCarousel({
